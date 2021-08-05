@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Distribuidora San Juan</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+	<div id="left" class=" col-12">
+			<div style="position: absolute;width: 100%;height: 100%;z-index: 1000;background-color: #ae174c;top: 0;
+			left: 0; opacity: .5;"></div>
+	</div>
+
+	<div id="right" class="container col-md-12 col-12">
+
+
+
+	
+
+		<!-------------------------------------------FORMULARIO DE LOGIN-->
+		<form id="login" name="login" class="col-md-8 container">
+			<img src="img/logo-primary.png" class="img-fluid marbot">
+			<input id="login-user" type="text" placeholder="Usuario" class="col-md-12 form-control martopmin">
+			<input id="login-pass" type="password" placeholder="Contraseña" class="col-md-12 form-control martopmin">
+			<button id="login-btn" class="col-md-12 btn btn-custom martopmax">Ingresar</button>
+			<a href="#" id="to-reg" class="text-center secondary-link center-block">Registrar</a>
+			
+		<!-- Button visita 
+		<button id="visita" class="col-md-4 center-block btn btn-custom">
+		DE VISITA
+		</button>-->	
+
+		</form>
+		<!-------------------------------------------FORMULARIO DE REGISTRO-->
+		<form id="signup" name="reg" class="col-md-8 container" action="registro.php" method="POST">
+			<img src="img/logo-primary.png" class="img-fluid marbot">
+			<input type="text" class="col-md-12 form-control martopmin" name="usuario" placeholder="Nombre">
+			<input type="text" class="col-md-12 form-control martopmin" name="correo" placeholder="Email">
+			<input type="text" class="col-md-12 form-control martopmin" name="telefono" placeholder="Teléfono">
+			<input type="password" class="col-md-12 form-control martopmin" name="password" placeholder="Contraseña">
+			<input type="password" class="col-md-12 form-control martopmin" name="password2" placeholder="Repetir contraseña">
+			<div class="row text-center">
+				<a href="#" class="secondary-link" id="back-tolog">Volver</a>
+                <button class="btn btn-custom">Registrar</button>
+			</div>
+		</form>
+	
+
+	</div>
+
+<div id="load-screen">
+    <div class="col-md-6 container text-center" style="margin-top: 10em;">
+      <div class=" col-md-12 container">
+        <img src="img/logo-primary.png" class="img-fluid col-md-12" style="width: 70%;">
+      </div>
+        <div class="spinner-border col-md-12 container" style="width: 3rem; height: 3rem;color:#ae174c; margin-top: 30%;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    
+</div>
+
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--script type="text/javascript" src="js/main.js"></script-->
+	<script type="text/javascript" src="ajax.js"></script>
+	<script>
+		$(document).ready(function(){
+			 $("#load-screen").fadeOut();
+			 $("#to-reg").click(function(){
+		$("#login").fadeOut(function(){
+			$("#signup").fadeIn();
+		});
+	});
+	$("#back-tolog").click(function(){
+		$("#signup").fadeOut(function(){
+			$("#login").fadeIn();
+		});
+	});
+		});
+		
+	</script>
+
+</body>
+</html>

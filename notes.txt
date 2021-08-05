@@ -1,0 +1,11 @@
+11/11/2020----------------------------
+
+-Se implementó manejo de sesiones.
+-Cambio de color en sidebar.
+-Iconos en elementos de sidebar.
+-Cambio de fuente a Century Gothic.
+-Creación de Unauthorized.html.
+-Creacion de Destroyer.php.
+-Corrección en el verificador de usuarios.
+
+--------------------------------------
